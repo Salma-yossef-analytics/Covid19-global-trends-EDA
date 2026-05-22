@@ -1,52 +1,80 @@
+# 🦠 COVID-19 Global Trends — Exploratory Data Analysis
 
-# COVID-19 Mortality Analysis
+> *"Numbers speak. My job is to make their story heard."*
 
-📊 **تحليل بصري وإحصائي لبيانات جائحة كورونا** باستخدام Python وGoogle Colab، مع التركيز على مقارنة **عدد الوفيات الإجمالي** و**معدل الوفيات** بين الدول.
- 📊 تطبيق عملي لمفهوم "المشي العشوائي" (Random Walk) على بيانات COVID-19 من منصة Our World in Data.
+A visual and statistical analysis of COVID-19 global data using Python and Google Colab, focusing on comparing total deaths, death rates, and time-series behavior across countries.
 
-## 📂 محتوى المشروع
-- **تحليل إحصائي** لأعلى الدول من حيث عدد الوفيات.
-- **مقارنة معدل الوفيات** (Deaths / Confirmed Cases).
-- **رسوم بيانية** توضّح الفروقات بين الدول.
-- **قراءة نقدية** لمدى ارتباط الأرقام بحجم الكارثة الحقيقية.
+---
 
-## 🔍 أهداف التحليل
-1. التمييز بين **الأرقام المطلقة** و**النسب المئوية** في قياس الخطورة.
-2. كشف الدول التي نجحت في احتواء الجائحة رغم عدد إصابات مرتفع.
-3. إبراز دور البنية التحتية والسرعة في الاستجابة الصحية.
-4.ااختبار ما إذا كانت السلسلة الزمنية لعدد الحالات الجديدة اليومية تتبع سلوك المشي العشوائي أم لا، وهو ما له دلالات كبيرة على إمكانية التنبؤ بالبيانات.
+## 📌 Project Overview
 
-## 📊 التقنيات والأدوات
-- Python
-- Pandas, Matplotlib, Seaborn -
-- **Statsmodels**: لتطبيق اختبار Augmented Dickey-Fuller (ADF) الإحصائي.
+This project goes beyond surface-level numbers to explore **what the data actually tells us** about the pandemic's impact — distinguishing between absolute counts and proportional severity, and testing whether COVID-19 case trends follow predictable patterns.
 
-- Google Colab
-- بيانات من [Our World in Data](https://ourworldindata.org/coronavirus)
+**Dataset:** [Our World in Data — COVID-19](https://ourworldindata.org/coronavirus)
 
-## 🚀 طريقة التشغيل
-1. افتح ملف `covid19_analysis.ipynb` على [Google Colab](https://colab.research.google.com/).
-2. ثبّت المكتبات المطلوبة:
-   ```python
-   pip install pandas matplotlib seaborn
+---
 
-## 📊 مخرجات التحليل
+## 🎯 Analysis Goals
 
-**أعلى 10 دول من حيث إجمالي الوفيات:**
-![Top 10 Total Deaths](top10_total_deaths.png)
+1. **Distinguish** between absolute death counts and death rates (Deaths / Confirmed Cases) as measures of severity.
+2. **Identify** countries that successfully contained the pandemic despite high case numbers.
+3. **Highlight** the role of healthcare infrastructure and response speed in outcomes.
+4. **Test** whether the daily new cases time series follows a Random Walk — a key indicator of predictability and potential for forecasting models.
 
-**أعلى 10 دول من حيث معدل الوفيات:**
-![Top 10 Death Rate](top10_death_rate.png)
+---
 
-*** الدول ذات أدنى معدل وفاة
-![Low Death Rate](low_death_rate.png)
-*** بعد تطبيق اختبار ADF، تبين أن بيانات الحالات الجديدة في الولايات المتحدة **لا تتبع المشي العشوائي**. هذا يشير إلى أن البيانات تحتوي على أنماط وبنية يمكن استغلالها في بناء نماذج تنبؤية.
+## 📂 Project Contents
 
+- Statistical analysis of the **Top 10 countries by total deaths**
+- Comparison of **death rates** across nations
+- Visualizations illustrating differences between countries
+- Critical reading of how raw numbers relate to the true scale of impact
+- **ADF (Augmented Dickey-Fuller) statistical test** applied to US daily new cases
 
-**Salma Alyossef** – محللة بيانات تهتم بتحويل الأرقام إلى قصص ورؤى عملية.
+---
 
-📌 **التواصل:**
-LinkedIn(https://www.linkedin.com/in/salma-alyossef-586a951ab)
+## 🔍 Key Finding
 
+> After applying the **ADF statistical test**, US daily new case data was found to **not follow a Random Walk**.
+>
+> This means the data contains **structural patterns** that can be leveraged to build predictive forecasting models — a significant insight for epidemiological planning.
 
-💡 *"الأرقام تتحدث، ومهمتي أن أجعل قصتها مسموعة."*
+---
+
+## 🛠️ Tools & Technologies
+
+| Tool | Purpose |
+|------|---------|
+| Python | Core programming language |
+| Pandas | Data loading and manipulation |
+| Matplotlib & Seaborn | Data visualization |
+| Statsmodels | ADF statistical testing |
+| Google Colab | Development environment |
+
+---
+
+## 🚀 How to Run
+
+1. Open `covid19_analysis.ipynb` in [Google Colab](https://colab.research.google.com/)
+2. Install required libraries:
+```bash
+pip install pandas matplotlib seaborn statsmodels
+```
+3. Run all cells sequentially
+
+---
+
+## 📊 Sample Outputs
+
+- Top 10 countries by total deaths
+- Top 10 countries by death rate
+- Countries with lowest death rates
+- ADF test results for US time-series data
+
+---
+
+## 👩‍💻 About
+
+**Salma Alyossef** — Data Analyst passionate about transforming raw numbers into actionable insights and real-world stories.
+
+📌 [LinkedIn](https://www.linkedin.com/in/salma-alyossef-586a951ab) | [GitHub](https://github.com/Salma-yossef-analytics)
